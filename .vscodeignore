@@ -1,0 +1,8 @@
+src/**
+tsconfig.json
+esbuild.js
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.gitignore
+dist/**/*.map
+res/logo-source.svg

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="res/logo-source.svg" width="120" alt="Better i18n logo">
+  <img src="res/icon.png" width="120" alt="Better i18n logo">
 </p>
 
 <h1 align="center">Better i18n</h1>
