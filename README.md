@@ -1,8 +1,14 @@
-# Better i18n
+<p align="center">
+  <img src="res/logo-source.svg" width="120" alt="Better i18n logo">
+</p>
 
-Fast, offline i18n dashboard and inline editor for Vue i18n projects (`vue-i18n` /
-`@nuxtjs/i18n`). No account, no AI calls, no paywall — everything runs locally against
-your own locale files.
+<h1 align="center">Better i18n</h1>
+
+<p align="center">
+Fast, offline i18n dashboard and inline editor for Vue i18n projects (<code>vue-i18n</code> /
+<code>@nuxtjs/i18n</code>). No account, no AI calls, no paywall — everything runs locally
+against your own locale files.
+</p>
 
 ## Table of contents
 
