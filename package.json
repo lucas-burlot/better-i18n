@@ -11,12 +11,24 @@
     "type": "git",
     "url": "https://github.com/lucas-burlot/better-i18n.git"
   },
-  "keywords": ["i18n", "vue-i18n", "nuxt", "localization", "translation", "vue"],
+  "keywords": [
+    "i18n",
+    "vue-i18n",
+    "nuxt",
+    "localization",
+    "translation",
+    "vue"
+  ],
   "engines": {
     "vscode": "^1.86.0"
   },
-  "categories": ["Other", "Linters"],
-  "activationEvents": ["onStartupFinished"],
+  "categories": [
+    "Other",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "configuration": {
@@ -34,7 +46,9 @@
         },
         "betterI18n.codeGlobs": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "default": [
             "apps/frontend/app/**/*.{vue,ts}",
             "apps/frontend/stories/**/*.{vue,ts}"
@@ -101,6 +115,7 @@
     "@types/vscode": "^1.86.0",
     "@vscode/vsce": "^3.2.0",
     "esbuild": "^0.24.0",
+    "ovsx": "^1.1.0",
     "typescript": "^5.6.0"
   }
 }
