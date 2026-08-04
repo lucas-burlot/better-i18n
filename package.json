@@ -1,0 +1,101 @@
+{
+  "name": "better-i18n",
+  "displayName": "Better i18n",
+  "description": "Fast, offline i18n dashboard and inline editor for Vue i18n projects.",
+  "version": "0.1.1",
+  "publisher": "pewoh",
+  "author": "Pewoh",
+  "icon": "res/icon.png",
+  "keywords": ["i18n", "vue-i18n", "nuxt", "localization", "translation", "vue"],
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": ["Other", "Linters"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Better i18n",
+      "properties": {
+        "betterI18n.localesGlob": {
+          "type": "string",
+          "default": "apps/frontend/i18n/locales/**/*.json",
+          "description": "Glob (relative to workspace root) matching all locale JSON files."
+        },
+        "betterI18n.sourceLocale": {
+          "type": "string",
+          "default": "fr",
+          "description": "Reference locale: completion % and missing-key detection are computed against its key set."
+        },
+        "betterI18n.codeGlobs": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": [
+            "apps/frontend/app/**/*.{vue,ts}",
+            "apps/frontend/stories/**/*.{vue,ts}"
+          ],
+          "description": "Globs (relative to workspace root) scanned for t()/$t() key usages."
+        },
+        "betterI18n.inlineTranslations": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the source-locale translation after each t('key') call in the editor (requires a window reload to change)."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "betterI18n",
+          "title": "Better i18n",
+          "icon": "res/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "betterI18n": [
+        {
+          "id": "betterI18n.dashboard",
+          "name": "Dashboard"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "betterI18n.refresh",
+        "title": "Better i18n: Refresh",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "betterI18n.editValue",
+        "title": "Better i18n: Edit Translation"
+      },
+      {
+        "command": "betterI18n.revealKey",
+        "title": "Better i18n: Reveal Key"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "betterI18n.refresh",
+          "when": "view == betterI18n.dashboard",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "typecheck": "tsc --noEmit",
+    "package": "vsce package --no-dependencies -o better-i18n.vsix"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.86.0",
+    "@vscode/vsce": "^3.2.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0"
+  }
+}
