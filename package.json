@@ -3,8 +3,8 @@
   "displayName": "Better i18n",
   "description": "Fast, offline i18n dashboard and inline editor for Vue i18n projects.",
   "version": "0.1.1",
-  "publisher": "pewoh",
-  "author": "Pewoh",
+  "publisher": "lucas-burlot",
+  "author": "Lucas Burlot",
   "license": "MIT",
   "icon": "res/icon.png",
   "repository": {
