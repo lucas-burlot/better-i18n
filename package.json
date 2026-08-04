@@ -5,6 +5,7 @@
   "version": "0.1.1",
   "publisher": "pewoh",
   "author": "Pewoh",
+  "license": "MIT",
   "icon": "res/icon.png",
   "repository": {
     "type": "git",
